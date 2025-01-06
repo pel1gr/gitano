@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Reino Gitano</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff0080, #ffcc00, #00ffff);
+            animation: colores 5s infinite;
+            color: #333;
+        }
+        @keyframes colores {
+            0% { background: #ff0080; }
+            33% { background: #ffcc00; }
+            66% { background: #00ffff; }
+            100% { background: #ff0080; }
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #ffcc00;
+            color: #440044;
+            border-bottom: 10px solid #ff0080;
+        }
+        header h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #440044;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            background: #440044;
+            border-bottom: 5px solid #ffcc00;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.2em;
+            transition: transform 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            transform: scale(1.2);
+            color: #ffcc00;
+        }
+
+        section {
+            padding: 30px;
+            text-align: center;
+            border: 5px solid #ff0080;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+        }
+        section:nth-child(odd) {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+
+        .boton-unirse {
+            background: linear-gradient(90deg, #ff0080, #00ffcc);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .boton-unirse:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #ff0080, 0 0 30px #00ffcc;
+        }
+
+        footer {
+            background: #440044;
+            color: #ffcc00;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .mensaje-especial {
+            display: none;
+            font-size: 1.8em;
+            color: #ff0080;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>El Reino Gitano</h1>
+        <p>¡Únete a nuestra familia y sé parte del legado gitano!</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#historia">Nuestra Historia</a></li>
+            <li><a href="#unete">Únete</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <section id="inicio">
+        <h2>Inicio</h2>
+        <p>Bienvenido al Reino Gitano, donde celebramos nuestras raíces, nuestra cultura y nuestra familia. ¡Aquí empieza tu camino hacia la grandeza!</p>
+    </section>
+    <section id="historia">
+        <h2>Nuestra Historia</h2>
+        <p>Los gitanos somos una comunidad unida por nuestras tradiciones, alegría y espíritu indomable. Nuestra historia está llena de arte, música y conexión.</p>
+        <p>¿Quieres ser parte de algo grande? ¡Sigue leyendo!</p>
+    </section>
+    <section id="unete">
+        <h2>¡Únete a Nuestra Familia!</h2>
+        <p>En el Reino Gitano siempre hay lugar para uno más. Haz clic en el botón para recibir un mensaje especial y comenzar tu viaje:</p>
+        <button class="boton-unirse" onclick="mostrarMensaje()">¡Quiero ser parte!</button>
+        <p class="mensaje-especial" id="mensaje">¡Bienvenido al Reino Gitano! Ahora eres parte de nuestra familia real. 🌟</p>
+    </section>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes preguntas o quieres saber más? Escríbenos: 
+            <a href="mailto:reygitano@legado.com">reygitano@legado.com</a>
+        </p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Reino Gitano. Todos los derechos reservados. <br> Diseñado con amor por el Rey Gitano.</p>
+    </footer>
+    <script>
+        function mostrarMensaje() {
+            const mensaje = document.getElementById('mensaje');
+            mensaje.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
